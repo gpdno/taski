@@ -1,6 +1,7 @@
 class PagesController < ApplicationController
   def home
-  	@projects = Project.all
+  	@projects = Project.limit(5)
+    #@projects = Project.where(user_id: current_user.id)
   end
 
   def about
@@ -9,4 +10,8 @@ class PagesController < ApplicationController
 
   def contact
   end
+
+  def error
+  end
+  
 end

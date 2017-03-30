@@ -1,5 +1,5 @@
 <h1>Pages#home</h1>
 
-<% @projects.each do |project| %>
-	<p><strong><%= project.title %></strong></p>
-<% end %>
+<div class='homepage'>
+	<%= render 'shared/projects' %>
+</div>
